@@ -1,15 +1,15 @@
 <div class="video-js-box">
 	<video
-		id="<%=options[:id]%>"
-		class="<%= @options[:classes] %> video-js vjs-default-skin" 
+		id="<%= options[:id]%>"
+		class="<%= options[:classes] %> video-js vjs-default-skin" 
     preload="auto" 
-    width="<%=@options[:width]%>" 
-    height="<%=@options[:height]%>" 
-    poster="<%= @options[:poster] %>" 
-    data-setup="<%= @options[:setup] || '{}' %>" 
-    <%= "controls" if !!@options[:controls] %> 
-    <%= "autoplay" if !!@options[:autoplay] %> 
-    <%= "loop" if !!@options[:loop] %>
+    width="<%= options[:width]%>" 
+    height="<%= options[:height]%>" 
+    poster="<%= options[:poster] %>" 
+    data-setup="<%= options[:setup] || '{}' %>" 
+    <%= "controls" if !!options[:controls] %> 
+    <%= "autoplay" if !!options[:autoplay] %> 
+    <%= "loop" if !!options[:loop] %>
 	>
 		<% if options[:sources] %>
 			<%- options[:sources].each do |type, source| %>
